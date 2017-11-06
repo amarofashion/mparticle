@@ -1,4 +1,4 @@
-connection: "aws_redshift"
+connection: "mparticle_redshift"
 
 # include all the views
 include: "*.view"
