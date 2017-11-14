@@ -1,6 +1,6 @@
 view: rawevents {
   ## change to relevant schema name for block implementation
-  sql_table_name: public.eventsview ;;
+  sql_table_name: mparticle_prod.eventsview ;;
 
   dimension: app_id {
     type: number
@@ -347,6 +347,11 @@ view: rawevents {
     suggest_dimension: event_name
   }
 
+  filter: event_6 {
+    suggest_explore: rawevents
+    suggest_dimension: event_name
+  }
+
   measure: funnel.event_1_uu_count {
     type: number
     sql: count(distinct case when {% condition event_1 %} ${event_name} {% endcondition %} THEN ${mparticle_user_id} END) ;;
@@ -370,5 +375,10 @@ view: rawevents {
   measure: funnel.event_5_uu_count {
     type: number
     sql: count(distinct case when {% condition event_5 %} ${event_name} {% endcondition %} THEN ${mparticle_user_id} END) ;;
+  }
+
+  measure: funnel.event_6_uu_count {
+    type: number
+    sql: count(distinct case when {% condition event_6 %} ${event_name} {% endcondition %} THEN ${mparticle_user_id} END) ;;
   }
 }

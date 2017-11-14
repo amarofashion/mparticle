@@ -30,27 +30,33 @@
       type: field_filter
       explore: rawevents
       field: rawevents.event_name
-      default_value: "eCommerce - ViewDetail"
+      default_value: "eCommerce - Impression"
 
     - name: event_2
       type: field_filter
       explore: rawevents
       field: rawevents.event_name
-      default_value: "eCommerce - AddToWishlist"
+      default_value: "eCommerce - Click"
 
     - name: event_3
       type: field_filter
       explore: rawevents
       field: rawevents.event_name
-      default_value: "eCommerce - AddToCart"
+      default_value: "eCommerce - ViewDetail"
 
     - name: event_4
       type: field_filter
       explore: rawevents
       field: rawevents.event_name
-      default_value: "eCommerce - Checkout"
+      default_value: "eCommerce - AddToCart"
 
     - name: event_5
+      type: field_filter
+      explore: rawevents
+      field: rawevents.event_name
+      default_value: "eCommerce - Checkout"
+
+    - name: event_6
       type: field_filter
       explore: rawevents
       field: rawevents.event_name
@@ -242,7 +248,7 @@
     model: mparticle_looker_blocks
     explore: rawevents
     measures: [funnel.event_1_uu_count, funnel.event_2_uu_count, funnel.event_3_uu_count,
-      funnel.event_4_uu_count, funnel.event_5_uu_count]
+      funnel.event_4_uu_count, funnel.event_5_uu_count, funnel.event_6_uu_count]
     #dimensions: [rawevents.app_name_platform]
     listen:
       date: rawevents.event_date
@@ -251,6 +257,7 @@
       event_3: rawevents.event_3
       event_4: rawevents.event_4
       event_5: rawevents.event_5
+      event_6: rawevents.event_6
       platform: rawevents.platform
       is_debug_data: rawevents.is_debug
     limit: 500
@@ -283,3 +290,4 @@
       funnel.event_3_uu_count: Event 3
       funnel.event_4_uu_count: Event 4
       funnel.event_5_uu_count: Event 5
+      funnel.event_6_uu_count: Event 6
