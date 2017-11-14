@@ -30,7 +30,7 @@
       type: field_filter
       explore: rawevents
       field: rawevents.event_name
-      default_value: "eCommerce - Impression"
+      default_value: "home"
 
     - name: event_2
       type: field_filter
@@ -148,7 +148,7 @@
     show_null_points: true
     x_axis_label: Attribution Source
     y_axis_labels: [Total Revenue, ARPU]
-    y_axis_value_format: $#,##0.00
+    y_axis_value_format: "\"R\"$#,##0.00"
     series_types:
       rawevents.arpu: line
     series_labels:
@@ -191,7 +191,7 @@
     show_null_points: true
     x_axis_label: Hour of Day
     y_axis_labels: [Total Revenue, ARPU]
-    y_axis_value_format: $#,##0.00
+    y_axis_value_format: "\"R\"$#,##0.00"
     series_types:
       rawevents.arpu: line
     series_labels:
@@ -234,7 +234,7 @@
     show_null_points: true
     x_axis_label: Date
     y_axis_labels: [Total Revenue, ARPU]
-    y_axis_value_format: $#,##0.00
+    y_axis_value_format: "\"R\"$#,##0.00"
     series_types:
       rawevents.arpu: line
     series_labels:
@@ -286,8 +286,8 @@
     y_axis_value_format: '#,##0'
     series_labels:
       funnel.event_1_uu_count: Event 1 (Impressions)
-      funnel.event_2_uu_count: Event 2 (Catalog Click)
-      funnel.event_3_uu_count: Event 3 (Product Detail)
+      funnel.event_2_uu_count: Event 2 (Catalog Product)
+      funnel.event_3_uu_count: Event 3 (Product)
       funnel.event_4_uu_count: Event 4 (Add To Cart)
       funnel.event_5_uu_count: Event 5 (Checkout)
       funnel.event_6_uu_count: Event 6 (Purchase)

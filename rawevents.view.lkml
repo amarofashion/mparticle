@@ -288,7 +288,7 @@ view: rawevents {
   measure: revenue {
     type: sum
     sql: ${event_ltv_value} ;;
-    value_format: "$#,##0.00"
+    value_format: "\"R\"$#,##0.00"
   }
 
   measure: install_count {
@@ -305,7 +305,7 @@ view: rawevents {
     label: "ARPU"
     type: number
     sql: ${revenue} / ${unique_user_count} ;;
-    value_format: "$#,##0.00"
+    value_format: "\"R\"$#,##0.00"
   }
 
   # Audience analytics fields #
