@@ -285,9 +285,9 @@
     y_axis_labels: [Unique User Count]
     y_axis_value_format: '#,##0'
     series_labels:
-      funnel.event_1_uu_count: Event 1
-      funnel.event_2_uu_count: Event 2
-      funnel.event_3_uu_count: Event 3
-      funnel.event_4_uu_count: Event 4
-      funnel.event_5_uu_count: Event 5
-      funnel.event_6_uu_count: Event 6
+      funnel.event_1_uu_count: Event 1 (Impressions)
+      funnel.event_2_uu_count: Event 2 (Catalog Click)
+      funnel.event_3_uu_count: Event 3 (Product Detail)
+      funnel.event_4_uu_count: Event 4 (Add To Cart)
+      funnel.event_5_uu_count: Event 5 (Checkout)
+      funnel.event_6_uu_count: Event 6 (Purchase)
