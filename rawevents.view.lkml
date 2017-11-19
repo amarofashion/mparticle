@@ -20,7 +20,7 @@ view: rawevents {
   dimension_group: install_timestamp {
     type: time
     datatype: epoch
-    timeframes: [time, date, week, month, year]
+    timeframes: [time, hour, date, week, month, year]
     sql: (${TABLE}.firstseentimestamp::bigint) / 1000 ;;
   }
 
