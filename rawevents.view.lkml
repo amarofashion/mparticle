@@ -235,7 +235,7 @@ view: rawevents {
   dimension_group: session_start_timestamp {
     type: time
     datatype: epoch
-    timeframes: [time, date, week, month, year]
+    timeframes: [time, hour, date, week, month, year]
     sql: (${TABLE}.sessionstarttimestamp::bigint)/1000 ;;
   }
 
